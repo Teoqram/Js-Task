@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+/* header start */
+header {
+  background-color: var(--mainColor);
+}
+.main-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.header-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.header-li {
+  font-size: 28px;
+  border-right: 2px solid black;
+  padding-right: 30px;
+}
+
+.main-name {
+  color: black;
+}
+/*header end*/
+
+/*Navbar Start*/
+.nav-bar {
+  background-color: black;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #282727;
+}
+.nav-item {
+  font-size: 30px;
+  color: #fff;
+}
+/*Navbar end*/
+
+/*Section Start*/
+.container1 {
+  background-color: black;
+}
+
+.abaut-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: var(--mainColor);
+}
+
+.abaut-me h2 {
+  border-bottom: 1px solid var(--mainColor);
+}
+
+.abaut-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abaut-img {
+  width: 210px;
+  height: 210px;
+  padding: 100px;
+}
+.abaut-p {
+  color: #fff;
+  font-size: 22px;
+  margin: 80px;
+}
+/*container2*/
+.container2 {
+  background-color: #cac7ca;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  color: black;
+}
+.projects h3 {
+  border-bottom: 1px solid black;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.logo h4 {
+  font-size: 45px;
+}
+.child-logo {
+  width: 100px;
+  object-fit: cover;
+}
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Li elementlərinin arasında 10px məsafə */
+}
+
+.projects-li {
+  font-size: 26px;
+}
+
+.container3 {
+  background-color: black;
+}
+
+.container3-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 74px;
+  color: var(--mainColor);
+}
+.container3-name h5 {
+  border-bottom: 1px solid var(--mainColor);
+}
+
+.achievements {
+  list-style-type: disc;
+  padding-left: 200px;
+  padding-bottom: 40px;
+}
+
+.achievement-item {
+  margin-bottom: 30px;
+}
+.achievement-item::marker {
+  color: #f1f1f1;
+  font-size: 18px;
+}
+
+.achievement-title {
+  font-size: 24px;
+  color: #f1f1f1; /* Açıq rəng */
+}
+
+.achievement-details {
+  margin-top: px;
+  padding-left: 20px;
+  color: #ccc; /* Daxili mətnlər üçün açıq boz */
+  font-size: 20px;
+}
+
+/* ksksksksks */
+
+/* "Contact" başlığı */
+
+.container4 {
+  background-color: #cac7ca;
+}
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  color: black;
+  margin-bottom: 30px;
+}
+.contact-title p {
+  border-bottom: 1px solid black;
+}
+
+.container-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.contact-form {
+  background-color: black;
+  color: white;
+  padding: 30px;
+  width: 35%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-label label {
+  color: white;
+  font-size: 20px;
+}
+
+.container-label input {
+  width: 300px;
+  border: 0;
+  margin-right: 60px;
+}
+
+.contact-form textarea {
+  width: 300px;
+  height: 70px;
+  resize: none;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+}
+
+.container-button button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+}
+
+/* .column label {
+  width: 200px;
+} */
+
+/* footer */
+
+.footer-links {
+  background-color: var(--mainColor);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+}
+
+.footer-links a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  border-right: 1px solid black;
+  padding-right: 30px;
+}
+
+.footer-links a:hover {
+  color: rgb(33, 199, 69);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 60px;
+  padding-right: 60px;
+  height: 80px;
+  background-color: black;
+}
+
+.footer-bottom p {
+  color: green;
+  font-size: 30px;
+  margin: 5px 0;
+}
+
+.top-link {
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}

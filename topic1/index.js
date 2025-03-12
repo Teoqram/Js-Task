@@ -281,75 +281,75 @@
 
 
 
-let pet = "golden retriever";
-let pet2 = pet.toUpperCase()
-console.log(pet2);
+// let pet = "golden retriever";
+// let pet2 = pet.toUpperCase()
+// console.log(pet2);
 
-// _________1^butun herfleri boyuk edir
+// // _________1^butun herfleri boyuk edir
 
-let question = "Can you solve this problem?";
+// let question = "Can you solve this problem?";
 
-let question2 = question.length;
-console.log(question2);
-// _________2^ uzunugun tapir
+// let question2 = question.length;
+// console.log(question2);
+// // _________2^ uzunugun tapir
 
-let activity = "This game is boring";
+// let activity = "This game is boring";
 
-let activity2 = activity.replace("boring", "exciting")
-console.log(activity2);
+// let activity2 = activity.replace("boring", "exciting")
+// console.log(activity2);
 
-// __________3^ sozun yerini yeni soz ile deyisir 
+// // __________3^ sozun yerini yeni soz ile deyisir 
 
-let headline = "Choose Your Adventure!";
+// let headline = "Choose Your Adventure!";
 
-let headline2 = headline.substring(12, 22);
-console.log(headline2);
+// let headline2 = headline.substring(12, 22);
+// console.log(headline2);
 
-// __________4^ necenci indexde yerlesdiyine gore sou cxarmaq 
-
-
-let desserts = ["Ice Cream", "Pie", "Pudding"];
-
-let desserts2 = "Cake";
-desserts.push(desserts2);
-
-console.log(desserts);
-
-// _________5^ cakeni push eddim desertslerin arasina 
+// // __________4^ necenci indexde yerlesdiyine gore sou cxarmaq 
 
 
-let cities = ["London", "New York", "Tokyo"];
+// let desserts = ["Ice Cream", "Pie", "Pudding"];
 
-let cities2 = cities.includes("Tokyo");
+// let desserts2 = "Cake";
+// desserts.push(desserts2);
 
-console.log(cities2);
+// console.log(desserts);
 
-
-//_________6^ inculudes metodu true false qaytarir 
-
-
-let cars = ["Sedan", "Coupe"];
-let trucks = ["Pickup", "SUV"];
-
-let car = cars.concat(trucks)
-
-console.log(car);
-
-//_________7^ concat iki arrayi birlesdirir 
-
-let dessert = ["Ice Cream", "Pie", "Pudding", "Cake"];
-
-let index = dessert.indexOf("Pie")
-console.log(index);
-
-//________8^ indexOf indexsin necenci yerde yerlesdiyin logda gosterir 
+// // _________5^ cakeni push eddim desertslerin arasina 
 
 
-let word = "Technology";
+// let cities = ["London", "New York", "Tokyo"];
 
-let string = word.split("").reverse().join("");
+// let cities2 = cities.includes("Tokyo");
 
-console.log(string);
+// console.log(cities2);
+
+
+// //_________6^ inculudes metodu true false qaytarir 
+
+
+// let cars = ["Sedan", "Coupe"];
+// let trucks = ["Pickup", "SUV"];
+
+// let car = cars.concat(trucks)
+
+// console.log(car);
+
+// //_________7^ concat iki arrayi birlesdirir 
+
+// let dessert = ["Ice Cream", "Pie", "Pudding", "Cake"];
+
+// let index = dessert.indexOf("Pie")
+// console.log(index);
+
+// //________8^ indexOf indexsin necenci yerde yerlesdiyin logda gosterir 
+
+
+// let word = "Technology";
+
+// let string = word.split("").reverse().join("");
+
+// console.log(string);
 
 
 //_________9^  Split arrayi setrlere cevirdi reverse tersine cevirdi joinde tekrar setire sevirdi

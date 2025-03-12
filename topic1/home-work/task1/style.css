@@ -1,0 +1,60 @@
+body {
+  border: 0;
+  margin: 0;
+}
+
+.main-head {
+  background-color: rgb(244, 242, 246);
+  display: flex;
+  flex-direction: column; /* Elementləri şaquli düz */
+  align-items: center; /* Mərkəzə düz */
+  justify-content: center; /* Dikey ortalama */
+  height: auto;
+  border-bottom: 1px solid black;
+}
+h1 {
+  font-size: 54px;
+}
+h1,
+h2 {
+  display: block;
+  margin: 0;
+}
+h2 {
+  margin-top: px;
+  font-size: 20px;
+}
+
+.navbar {
+  background-color: rgb(122, 242, 188);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 40px;
+  height: 40px;
+
+  object-fit: cover;
+}
+
+.nav-list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+/* .main-img {
+}
+
+footer {
+}
+img {
+} */
