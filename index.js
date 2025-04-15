@@ -1,58 +1,86 @@
-function randomEl(arr) {
-    const rIndex = Math.floor(Math.random() * arr.length);
-    return arr[rIndex];
-}
-const words = ['hello', 'world', 'foo', 'bar'];
-const guessWord = randomEl(words).split(""); // Gizli sözü hərflərə böl
-let hiddenWord = guessWord.map(() => "_"); // Başlanğıcda bütün hərfləri "_" ilə əvəz et
-let lives = 5; // Oyunçunun canları
-let guessedLetters = []; // Artıq daxil edilmiş hərfləri izləmək üçün
-
-while (hiddenWord.includes("_") && lives > 0) {
-
-    alert(`Sizin gizli sözünüz: ${hiddenWord.join(" ")}`);
-    
-    let letter = prompt("Bir hərf daxil edin:");
-
-    // Boş giriş və ya ləğv edilməni yoxla
-    if (!letter) {
-        alert("Düzgün bir hərf daxil edin!");
-        continue;
-    }
-
-    letter = letter.toLowerCase(); // Böyük və kiçik hərf fərqini aradan qaldır
-
-    // Əgər oyunçu artıq bu hərfi daxil edibsə
-    if (guessedLetters.includes(letter)) {
-        alert(`Siz artıq "${letter}" hərfini daxil etmisiniz! Daxil etdiyiniz Herfler : ${guessedLetters.join(", ")}`);
-        continue;
-    }
-
-    guessedLetters.push(letter); // Yeni daxil edilən hərfi siyahıya əlavə et
-
-    if (guessWord.includes(letter)) {
-        // Bütün uyğun indeksləri tap və dəyiş
-        guessWord.forEach((char, index) => {
-            if (char === letter) {
-                hiddenWord[index] = letter;
-            }
+const bankAccount = {
+    balance: 0,
+    transactions: [],
+  
+    deposit(amount) {
+      if (amount > 0) {
+        this.balance += amount;
+        this.transactions.push({
+          type: "deposit",
+          amount: amount,
+          date: new Date().toLocaleString()
         });
-    } else {
-        lives--; // Səhv tahmin canı azaldır
-        alert(`Səhv tahmin! Qalan can: ${lives}`);
+        alert(`Deposited: $${amount}\nNew Balance: $${this.balance}`);
+      } else {
+        alert("Please enter a valid amount.");
+      }
+    },
+  
+    withdraw(amount) {
+      if (amount > 0 && amount <= this.balance) {
+        this.balance -= amount;
+        this.transactions.push({
+          type: "withdraw",
+          amount: amount,
+          date: new Date().toLocaleString()
+        });
+        alert(`Withdrawn: $${amount}\nNew Balance: $${this.balance}`);
+      } else {
+        alert("Insufficient funds or invalid amount.");
+      }
+    },
+  
+    checkBalance() {
+      alert(`Your current balance is: $${this.balance}`);
+    },
+  
+    viewTransactionHistory() {
+      if (this.transactions.length === 0) {
+        alert("No transactions yet.");
+      } else {
+        let history = "Transaction History:\n\n";
+        this.transactions.forEach((tx, index) => {
+          history += `${index + 1}. ${tx.type.toUpperCase()} - $${tx.amount} on ${tx.date}\n`;
+        });
+        alert(history);
+      }
     }
-}
-
-// Oyun bitdi
-if (!hiddenWord.includes("_")) {
-    alert(`Təbriklər! Söz tapıldı: ${hiddenWord.join("")}`);
-} else {
-    alert(`Uduzdunuz! Düzgün söz: ${guessWord.join("")}`);
-}
-
-// Yenidən oynamaq istəyirsiniz?
-if (confirm("Yenidən oynamaq istəyirsiniz?")) {
-   startGAme(); // Oyunu yenidən başladır
-}
-startGAme(); // Oyunu yenidən başladır
-
+  };
+  
+  // App logic
+  let isRunning = true;
+  
+  while (isRunning) {
+    const choice = prompt(
+      "Welcome to the Bank App!\nWhat would you like to do?\n\n1: Deposit\n2: Withdraw\n3: Check Balance\n4: View Transaction History\n5: Exit"
+    );
+  
+    switch (choice) {
+      case "1":
+        const depositAmount = parseFloat(prompt("Enter amount to deposit:"));
+        bankAccount.deposit(depositAmount);
+        break;
+  
+      case "2":
+        const withdrawAmount = parseFloat(prompt("Enter amount to withdraw:"));
+        bankAccount.withdraw(withdrawAmount);
+        break;
+  
+      case "3":
+        bankAccount.checkBalance();
+        break;
+  
+      case "4":
+        bankAccount.viewTransactionHistory();
+        break;
+  
+      case "5":
+        isRunning = false;
+        alert("Thanks for using the Bank App. Goodbye!");
+        break;
+  
+      default:
+        alert("Invalid choice. Please try again.");
+    }
+  }
+  

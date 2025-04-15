@@ -746,14 +746,548 @@
 // console.log( `Even numbers:  ${filterEvenNumbers(numbers)}`) // bu funksiya ile arrayin icindeki tek reqemleri gosterir filter ile yazilmisdir filter metodu ile yazilmisdir
 
 
-function removeDuplicates(arr) {
-    return arr.filter(function(item, index) {
-        return arr.indexOf(item) === index;
-    });
-}
+// function removeDuplicates(arr) {
+//     return arr.filter(function(item, index) {
+//         return arr.indexOf(item) === index;
+//     });
+// }
 
-const numbers = [1, 2, 2, 3, 4, 4, 5, 6, 7, 6];
-console.log(removeDuplicates(numbers)); // bu funksiya ile arrayin icindeki tek reqemleri gosterir filter ile yazilmisdir filter metodu ile yazilmisdir ve tek olanlari gosterir
+// const numbers = [1, 2, 2, 3, 4, 4, 5, 6, 7, 6];
+// console.log(removeDuplicates(numbers)); // bu funksiya ile arrayin icindeki tek reqemleri gosterir filter metodu ile yazilmisdir ve tek olanlari gosterir
+
+
+// function greet(name) {
+//     return "Hello, " + name + "!";
+// }
+// console.log(greet("Samir")); // Output: Hello, Samir!  bu funksiya ile name i gosterir ve hello ile birles  ve logda gosterir
+
+
+// function createCounter() {
+//     let counter = 0;
+//     return function count () {
+//         counter++;
+//         return counter;
+//     };
+
+// }
+// let sumCount = createCounter();
+// console.log(sumCount());
+// console.log(sumCount());
+// console.log(sumCount()); // bu funksiya ile counteri artirir ve logda gosterir 
+
+// function multiplierClosure(initialValue) {
+//     return function(factor) {
+//         initialValue *= factor;
+//         return initialValue;
+//     };
+// }
+
+// const multiplyBy = multiplierClosure(5); // Başlanğıc dəyəri 5
+// console.log(multiplyBy(2)); // 5 * 2 = 10
+// console.log(multiplyBy(3)); // 10 * 3 = 30
+// console.log(multiplyBy(4)); // 30 * 4 = 120  bu funksiya ile reqemleri vurur ve logda gosterir
+
+
+// function A(num){
+//     function B(a){
+
+//         return a*num;
+//     }
+//     return B
+
+// }
+
+// let result = A(2);
+// console.log(result(3)); // bu funksiya ile numu vurur ve logda gosterir
+
+
+
+
+
+// function countVowels(str) {
+//     let vowels = "aeiou";
+//     return str
+//         .toLowerCase()
+//         .split("") // Sətiri hərflərə parçalayır
+//         .filter(char => vowels.includes(char)) // Yalnız saitləri saxlayır
+//         .length; // Saitlərin sayını qaytarır
+// }
+
+// // Test
+// console.log(countVowels("Hello World")); // 3
+// console.log(countVowels("JavaScript")); // 3
+// console.log(countVowels("AEIOU")); // 5 bu funksiya ile stringin icindeki saitlerin sayini gosterir ve logda gosterir
+
+
+// function countVowels(str) {
+//     let vowels = "aeiou";
+
+//     // 1. Sətiri kiçik hərfə çeviririk
+//     let lowerStr = str.toLowerCase();
+
+//     // 2. Sətiri hərflərə parçalayırıq
+//     let charArray = lowerStr.split("");
+
+//     // 3. Hər bir elementi yoxlayıb sait olub-olmadığını müəyyən edirik
+//     let vowelArray = charArray.filter(function (char) {
+//         return vowels.includes(char);
+//     });
+
+//     // 4. Saitlərin sayını hesablayırıq
+//     let vowelCount = vowelArray.reduce(function (count, char) {
+//         return count + 1;
+//     }, 0);
+
+//     return vowelCount;
+// }
+
+// // Testlər
+// console.log(countVowels("Hello World")); // 3
+// console.log(countVowels("JavaScript")); // 3
+// console.log(countVowels("AEIOU")); // 5
+// console.log(countVowels("Coding is Fun!")); // 5 bu funksiya ile stringin icindeki saitlerin sayini gosterir ve logda gosterir
+
+
+// function countVowels(str) {
+//     const vowels = "aeiou";
+//     const vowelArray = str.toLowerCase().split('').filter(char => vowels.includes(char));
+//     return vowelArray.lenght;
+// }
+
+// console.log(countVowels("Hello World")); // 3
+// console.log(countVowels("JavaScript")); // 3 bu funksiya ile stringin icindeki saitlerin sayini gosterir ve logda gosterir
+
+
+// function isPalindrome(str) {
+//     const reversedStr = str.split("").reverse().join("");
+//     return str === reversedStr;
+// }
+// console.log(isPalindrome("madam")); // true
+// console.log(isPalindrome("hello")); // false  bu funksiya ile stringin tersine cevirir ve logda gosterir
+
+// const isPalindrome = (str) => {
+
+// return str == str.split("").reverse().join("") ? true : false olada biler olmayada
+// }
+
+// console.log(isPalindrome("madam")); // true
+// console.log(isPalindrome("hello")); // false  bu funksiya ile stringin tersine cevirir ve logda gosterir
+
+// const companies = [
+//     { name: 'Whelp', category: 'Development', start: 2002, end: 2021 },
+//     { name: 'ByQr', category: 'Finance', start: 1998, end: 2023 },
+//     { name: 'Marandi', category: 'Design', start: 2012, end: 2022 },
+//     { name: 'Kapital', category: 'Technology', start: 1992, end: 2015 },
+//     { name: 'Pasha', category: 'Retail', start: 1999, end: 2005 },
+//     { name: 'Rabite', category: 'Finance', start: 2006, end: 2009 },
+//     { name: 'Irshad', category: 'Development', start: 2004, end: 2021 },
+//     { name: 'AzGranata', category: 'Design', start: 1993, end: 2011 },
+//     { name: 'AzerSun', category: 'Development', start: 1997, end: 2001 },
+//     { name: 'Veyseloglu', category: 'Design', start: 1988, end: 2018 }
+// ];
+
+
+// companies.forEach (company => {
+//     console.log(` ${company.name} sikerti ${company.category} ${company.start} - ${company.end}`);
+// }) // bu funksiya ile arrayin icindeki name leri gosterir forEach ile yazilmisdir
+
+// for (let i = 0; i < companies.length; i++) {
+//     console.log(` ${companies[i].name} sikerti ${companies[i].category} ${companies[i].start} - ${companies[i].end}`);
+// } // bu funksiya ile arrayin icindeki name leri gosterir for loop ile yazilmisdir
+
+
+// companies.map(function (company) {
+//     console.log(` ${company.name} sikerti ${company.category} ${company.start} - ${company.end}`); // bu funksiya ile arrayin icindeki name leri gosterir map ile yazilmisdir   
+// }) 
+
+// for(let names of companies){
+//     console.log(` ${names.name} sikerti ${names.category} ${names.start} - ${names.end}`); // bu funksiya ile arrayin icindeki name leri gosterir for loop ile yazilmisdir
+// }   // for ofla yazilib
+
+
+
+// const company = companies.filter((categorys) => (categorys.category === "Development") );
+
+// console.log(company); 
+
+
+// const company = companies.filter((categorys) => {
+// console.log(categorys.category == "Development");
+
+// });
+
+// console.log(company);  // filter ile tapdiq 
+
+// companies.map(function (company) {
+//     console.log(` ${company.name} sikerti ${company.end - company.start} yasinda fealiyyetini dayandirib`); // bu funksiya ile arrayin icindeki name leri gosterir map ile yazilmisdir   
+// })
+
+// let arr =companies.map((el) => {
+
+
+//     return `${el.name} ${el.end - el.start} `
+// })
+// console.log(arr);  endeen starti cxir
+
+// const sortedDataDesc = companies.sort((a, z) => a.year - z.year);
+
+// console.log(sortedDataDesc); 
+
+
+// const companies = [
+//     { name: 'Whelp', category: 'Development', start: 2002, end: 2021 },
+//     { name: 'ByQr', category: 'Finance', start: 1998, end: 2023 },
+//     { name: 'Marandi', category: 'Design', start: 2012, end: 2022 },
+//     { name: 'Kapital', category: 'Technology', start: 1992, end: 2015 },
+//     { name: 'Pasha', category: 'Retail', start: 1999, end: 2005 },
+//     { name: 'Rabite', category: 'Finance', start: 2006, end: 2009 },
+//     { name: 'Irshad', category: 'Development', start: 2004, end: 2021 },
+//     { name: 'AzGranata', category: 'Design', start: 1993, end: 2011 },
+//     { name: 'AzerSun', category: 'Development', start: 1997, end: 2001 },
+//     { name: 'Veyseloglu', category: 'Design', start: 1988, end: 2018 }
+// ];
+
+
+// const company = companies.filter((categorys) => (categorys.start >= 1998 && categorys.end <2014 ) );
+
+// console.log(company);
+
+// const company = companies.filter((categorys) => (categorys.end - categorys.start == 25));
+
+// console.log(company);
+
+
+// const reverseSorted = companies.sort((a, z) => a.name.localeCompare(z.name));
+// console.log(reverseSorted);
+
+
+
+
+
+// const numbers = [1,2,3,4,5,6];
+
+// const [first, second, ...rest] = numbers;
+
+// console.log(first); // 10
+// console.log(second); // 20
+// console.log(rest);
+
+//   const car = {
+//     make: "Tayota",
+//     model: "Carola",
+//     year: "2020",
+//     color: "red"
+
+//   };
+
+//   const { make, model , year } = car
+
+//   console.log(make);   // Output: Toyota
+// console.log(model);  // Output: Camry
+// console.log(year);   // Output: 2020
+
+// function printUser({ name, job }) {
+//         console.log(`${name} is a ${job}`);
+//       }
+
+//       const user = {
+//             name: "Telman",
+//             age: 25,
+//             job: "developer"
+//           };
+
+//           printUser(user); // "Telman is a developer" 
+
+
+// function Person(name, age) {
+//     this.name = name
+//     this.age = age
+// }
+
+
+// Person.prototype.greet = function () {
+//     console.log(`HEllo my name is ${this.name} and, I'm ${this.age} years old `);
+
+
+// }
+
+// const user1 = new Person("Telman", 26);
+// const user2 = new Person("Izzet", 25);
+
+
+// user1.greet()
+// user2.greet()
+
+
+// const user = {
+//     ad: "Telman",
+//     surname: "Amirbecoff"
+// };
+
+// const { ad: userName, surname, country = 'uncnown' } = user;
+
+// console.log(userName);
+// console.log(surname);
+// console.log(country);
+
+
+// const data = {
+//     errors: [
+//         {
+//             status: "403",
+//             source: { pointer: "/data/attributes/secretPowers" },
+//             detail: "Editing secret powers is not authorized on Sundays."
+//         },
+//         {
+//             status: "422",
+//             source: { pointer: "/data/attributes/volume" },
+//             detail: "Volume does not, in fact, go to 11."
+//         },
+//         {
+//             status: "500",
+//             source: { pointer: "/data/attributes/reputation" },
+//             title: "The backend responded with an error",
+//             detail: "Reputation service not responding after three requests."
+//         },
+//         {
+//             status: "403",
+//             source: { pointer: "/data/attributes/secretPowers" },
+//             detail: "Duplicate error with the same pointer and status."
+//         },
+//         {
+//             status: "999",
+//             source: { pointer: "/data/attributes/invalid" },
+//             detail: "This is an invalid status error."
+//         }
+//     ]
+// }; // output {id: '403 ' ,status: '403 ', source: {…}, detail: 'Duplicate error with the same pointer and status.'}
+
+
+// const newErreorMassage = data.errors.slice().reverse().find(error => error.status === "403")
+
+// console.log(newErreorMassage);
+
+// let result = Object.entries(data.errors)
+// let arr1 = []
+// for (let arr of result) {
+//     const elId = arr[0]
+//     const elObj = arr[1]
+//     const data1 = {
+//         id: elId,
+//         ...elObj
+//     }
+//     arr1.push(data1)
+// }
+
+
+// arr1.map(el => {
+//     return el.status == "500" ? console.log("Error 500 detected", el) : ""
+// });
+// arr1.map(el => {
+//     return el.source.pointer.includes('secretPower') ? console.log(el.source.pointer.replace('secretPower', 'Baku')) : ""
+
+// });  
+
+// let total = arr1.reduce( (sum,el) =>{
+//     return sum+Number(el.status)
+// },0 )
+// console.log(total);
+
+
+
+// etDay();
+// console.log(dayOfWeek);const currentDate = new Date();
+// const dayOfMonth = currentDate.getDate();
+// console.log(dayOfMonth);
+
+// const currentYear = new Date();
+// const year = currentYear.getFullYear();
+// console.log(year); 
+
+// const currentMonth = new Date();
+// const month = currentMonth.getMonth() +1;
+// console.log(month);
+
+// const currentDay = new Date();
+// const dayOfWeek = currentDay.g // Datelerle bagli tapsiriq 
+
+
+// function countDays() {
+
+//     const userInput = prompt("Tarixi YYYY-MM-DD formatında daxil et:");
+
+//     const userDate = new Date(userInput)
+//     if (isNaN(userDate)) {
+//         alert("Tarix düzgün daxil edilməyib.");
+//         return;
+//       }
+//       const currentDate = new Date();
+
+//       const differenceInTime = currentDate.getTime() - userDate.getTime();
+//       const differenceInDays = Math.abs(Math.floor(differenceInTime / (1000 * 60 * 60 * 24)));
+//       alert(`${differenceInDays} gün fərq var.`);
+
+// }
+
+// countDays();
+
+// const userInput1 = prompt("Tarixi YYYY-MM-DD formatında daxil et-1");
+// const userInput2 = prompt("Tarixi YYYY-MM-DD formatında daxil et-2");
+// function countDaysDiference() {
+
+//     let userDate1 = new Date(userInput1);
+//     let userDate2 = new Date(userInput2);
+//     let finalDay = Math.abs(
+//         Math.floor((userDate1 - userDate2) / (1000 * 60 * 60 * 24))
+//     )
+//     isNaN(userDate1 || userDate2)
+//         ? alert("yalniz reqem")
+//         : alert(`${finalDay} ferq`)
+
+// }
+
+// countDaysDiference(); //datelerle hesablama alertde tarixden taix cxmaq
+
+
+
+
+// const text = document.querySelector('#intro').innerText = ' bu metn deyisdi '
+
+
+// console.log(text);  metni deyismek 
+
+// const text = document.querySelector('#intro')
+
+// const newText =text.innerText = ' bu metn deyisdi '
+
+
+// console.log(newText); // bele yoluda var 
+
+
+
+// const boxes = document.querySelectorAll('.box');
+// console.log(boxes);
+
+// for ( let i = 0 ; i < boxes.length; i++){
+//     boxes[i].innerText = ' this a new box '
+// } // for ile yazmisiq 
+
+
+// const boxes = document.querySelectorAll('.box');
+// console.log(boxes);
+
+// boxes.forEach(function(box) {
+//     box.innerText = 'this is a new box';
+// }); forEach ile yazilisidir bu 
+
+// const listItems = document.querySelectorAll('ul li');
+
+// listItems.forEach(item => {
+//     item.innerText = 'List Item Updated13';
+// });
+
+// const listItems = document.querySelectorAll('li');
+
+// // for( let i = 0 ; i < listItems.length; i++){
+// //     listItems[i].innerText = ' this a new list '
+
+// // }
+
+// Array.from(listItems).forEach((el) => {
+//     el.innerText = ' this neww content '
+
+// });
+
+// const headers = document.querySelectorAll('#hello');
+
+// headers.forEach((header) => {
+//     if (header.innerText === 'salam') {
+//         header.innerText = 'sağol';
+//     }
+// });
+
+
+// const headers = document.querySelectorAll('#hello');
+
+// for (let i = 0; i < headers.length; i++) {
+//     if (headers[i].innerText === 'salam') {
+//         headers[i].innerText = 'sağol';
+//     }
+
+
+// }
+
+
+// const newEl = document.querySelector("#welcomeText");
+// let newEl2 = newEl.innerHTML = "Hello Wisitor!";
+
+
+// for (let i = 0; i < newEl2.length; i++) {
+//     newEl2[i].innerText = "Welcome to my website!"
+
+// }
+
+
+// const newEl = document.querySelector("#welcomeText");
+
+// // Əvvəlcə mətni yazırıq
+// newEl.innerText = "Hello Wisitor!";
+
+// // Sonra dövr qurub mətni dəyişirik
+// let text = "Welcome to my website!";
+// let i = 0;
+
+// let interval = setInterval(() => {
+//     if (i < text.length) {
+//         newEl.innerText = text.substring(0, i + 1); // hər dəfə bir hərf əlavə olunur
+//         i++;
+//     } else {
+//         clearInterval(interval); // dövr dayandırılır
+//     }
+// }, 100); // 100 ms fasilə ilə yazır MARAGLI TEMNADI
+
+
+// const changeItem = document.querySelector('#itemList')
+
+// changeItem.innerHTML = '<ul><li>Item 1</li><li>Item 2</li></ul>'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
